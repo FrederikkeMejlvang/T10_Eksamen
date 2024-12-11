@@ -24,6 +24,15 @@
       <div class="karrusel-item">
         <img src="./img/stockimg.jpg" alt="" />
       </div>
+      <div class="karrusel-item">
+        <img src="./img/stockimg.jpg" alt="" />
+      </div>
+      <div class="karrusel-item">
+        <img src="./img/stockimg.jpg" alt="" />
+      </div>
+      <div class="karrusel-item">
+        <img src="./img/stockimg.jpg" alt="" />
+      </div>
       <!--      plads til flere billeder her  -->
     </div>
     <!--     <button class="karrusel-next" onclick="moveSlide(1)">&#10095;</button> -->
@@ -40,16 +49,21 @@
     padding: 1rem;
   }
 
+  article {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
   .karrusel-container {
-    position: relative;
-    max-width: 100%;
+    max-width: 400px;
     overflow: hidden;
-    margin: 0 auto;
+    margin: auto;
+    transform: translateY(50%);
   }
 
   .karrusel-slide {
     display: flex;
-    transition: transform 0.9s ease-in-out;
+    transform: translateY(-50%);
+    position: absolute;
   }
 
   /*   .karrusel-prev {
