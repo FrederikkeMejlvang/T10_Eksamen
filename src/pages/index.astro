@@ -4,4 +4,31 @@ import Hero from "../components/Hero.astro";
 import CardKategori from "../components/Card_kategori.astro";
 import Footer from "../components/Footer.astro";
 import Priser from "../components/Priser.astro";
-import Motiongraphic from "../components/Motiongrap
+import Motiongraphic from "../components/Motiongraphic.astro";
+import Galleri from "../components/Galleri.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Elisabeth Nails</title>
+  </head>
+  <body>
+    <header>
+      <Header />
+      <Hero />
+    </header>
+    <main>
+      <CardKategori />
+      <Motiongraphic />
+      <Priser />
+      <Galleri />
+    </main>
+    <footer>
+      <Footer />
+    </footer>
+  </body>
+</html>
