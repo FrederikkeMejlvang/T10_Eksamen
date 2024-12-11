@@ -1,5 +1,8 @@
 <main>
-  <h1>Galleri</h1>
+  <article>
+    <h1>Galleri</h1>
+    <button></button>
+  </article>
   <article class="karrusel-container">
     <!--   <button class="karrusel-prev" onclick="moveSlide(-1)">&#10094;</button> -->
     <div class="karrusel-slide">
@@ -34,6 +37,7 @@
 
   h1 {
     color: #fcf8ec;
+    padding: 1rem;
   }
 
   .karrusel-container {
@@ -41,6 +45,11 @@
     max-width: 100%;
     overflow: hidden;
     margin: 0 auto;
+  }
+
+  .karrusel-slide {
+    display: flex;
+    transition: transform 0.9s ease-in-out;
   }
 
   /*   .karrusel-prev {
