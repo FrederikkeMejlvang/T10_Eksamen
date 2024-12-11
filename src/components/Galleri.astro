@@ -49,21 +49,18 @@
     padding: 1rem;
   }
 
-  article {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
   .karrusel-container {
-    max-width: 400px;
+    position: relative;
+    max-width: 100%;
     overflow: hidden;
-    margin: auto;
-    transform: translateY(50%);
+    margin: 0 auto;
   }
 
   .karrusel-slide {
     display: flex;
-    transform: translateY(-50%);
     position: absolute;
+    transition: transform 1s;
+    transform: translate(-0%);
   }
 
   /*   .karrusel-prev {
