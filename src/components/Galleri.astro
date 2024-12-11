@@ -52,15 +52,14 @@
   .karrusel-container {
     position: relative;
     max-width: 100%;
-    overflow: hidden;
-    margin: 0 auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin: auto;
   }
 
   .karrusel-slide {
     display: flex;
-    position: absolute;
-    transition: transform 1s;
-    transform: translate(-0%);
+    transition: transform 0.9s ease-in-out;
   }
 
   /*   .karrusel-prev {
@@ -76,7 +75,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    /*  background-color: rgba(254, 26, 26, 0); */
+    /*  background-color: none; */
   /*   color: #34170d;
     border: none;
     padding: 10px;
