@@ -18,17 +18,17 @@ html {
 
   /* Typography */
   --font-size-h1: 84px;
-  --font-size-h2-display: 64px;
   --font-size-h2: 64px;
   --font-size-h3: 40px;
   --font-size-h4: 32px;
   --font-size-h5: 24px;
   --font-size-p: 20px;
-  --font-size-h1-mobil: 24px;
-  --font-size-h2-mobil: 24px;
+  --font-size-h1-mobil: 32px;
+  --font-size-h2-mobil: 20px;
   --font-size-h3-mobil: 16px;
   --font-size-p-mobil: 16px;
   --font-size-p-tiny: 14px;
+  --font-size-p-knap: 14px;
 
   /* Border Radius */
   --border-radius-desktop: 20px;
@@ -41,43 +41,53 @@ body {
 }
 
 h1,
-h2.display,
 h2,
 h3,
 h4,
 h5,
-p,
 h1.mobil,
-h2.mobil h3.mobil,
+h2.mobil,
+h3.mobil,
 p.mobil,
-p.tiny {
+p.knap {
   color: var(--rød-100);
 }
 
-h1,
-h2.display,
-h1.mobil,
-h2.mobil {
-  font-family: "";
+p,
+p.tiny {
+  color: var(--brun-100);
 }
 
+h1,
 h2,
+h1.mobil,
+h2.mobil {
+  font-family: "ivypresto-display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 h3,
 h4,
 h5,
 p,
 h3.mobil,
+p.knap,
+a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 p.mobil,
-p.tiny a {
-  font-family: "Poppins";
+p.tiny {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 h1 {
   font-size: var(--font-size-h1);
-}
-
-h2.display {
-  font-size: var(--font-size-h2-display);
 }
 
 h2 {
@@ -118,6 +128,10 @@ p.mobil {
 
 p.tiny {
   font-size: var(--font-size-p-tiny);
+}
+
+p.knap {
+  font-size: var(--font-size-p-knap);
 }
 
 ul {
