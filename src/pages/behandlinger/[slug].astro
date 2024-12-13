@@ -1,0 +1,82 @@
+---
+import Button from '../../components/Button.astro';
+import MainLayout from '../../layout/MainLayout.astro';
+export async function getStaticPaths() {
+  const data = await fetch("https://rnozbkgkboarnfasijrg.supabase.co/rest/v1/Data", {
+    method: "GET", 
+    headers: {
+        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJub3pia2drYm9hcm5mYXNpanJnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzMyMzE0NTQsImV4cCI6MjA0ODgwNzQ1NH0.NL-tN_oAaXF7R0oGijdehXdp2tCSdhyxiQYB10oubvo"
+    },
+}).then(response => response.json());
+
+  return data.map((behandling) => {
+    return {
+      params: { slug: behandling.slug },
+      props: { myData: behandling },
+    };
+  });
+}
+
+const {myData} = Astro.props;
+console.log(myData);
+---
+
+<MainLayout title={myData["navn"]}>
+    <a href="../listview"><Button variant="primary" size="desktop">TILBAGE</Button></a>
+    <h2>{myData["navn"]}</h2>
+    <section class="item_info">
+        <div class="sideA">
+            <img src="../../../public/img/IMG_4006.webp" alt="" class="img1">
+            <img src="../../../public/img/IMG_4006.webp" alt="" class="img2">
+            <img src="../../../public/img/IMG_4006.webp" alt="" class="img3">
+            <img src="../../../public/img/IMG_4006.webp" alt="" class="img4">
+        </div>
+        <div class="sideB">
+        <div class="text_box">
+            <h5>TID</h5>
+            <p>{myData["tid"]}</p>
+            <h5>PRIS</h5>
+            <p>DKK {myData["pris"]},-</p>
+            <h5>VIGTIG INFO</h5>
+            <p>{myData["info"]}</p>
+        </div>
+        <Button variant="primary" size="desktop">DATO</Button>
+        <Button variant="primary" size="desktop">TID</Button>
+        <Button variant="secondary" size="desktop">BESTIL TID</Button>
+    </div>
+    </section>
+
+</MainLayout>
+
+<style>
+    .item_info{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 50px;
+    }
+    .sideA{
+        display: grid;
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+    .img1{
+        grid-column: 1/4;
+        grid-row: 1/2;
+    }
+    .img2{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .img3{
+        grid-column: 2;
+        grid-row: 3;
+    }
+    .img4{
+        grid-column: 3;
+        grid-row: 3;
+    }
+    .text_box{
+        border: 3px solid var(--rød-100);
+        border-radius: var(--border-radius-desktop);
+    }
+</style>

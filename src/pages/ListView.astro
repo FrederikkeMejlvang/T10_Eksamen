@@ -16,7 +16,8 @@ console.log(data);
 
 <MainLayout>
     <h2>{title}</h2>
-    <Button variant="primary" size="desktop">TILBAGE</Button>
+    <a href="/">
+    <Button variant="primary" size="desktop">TILBAGE</Button></a>
     <section class="card_container">
         {data.map(behandling=>{
             return <Card_behandling data={behandling}/>
