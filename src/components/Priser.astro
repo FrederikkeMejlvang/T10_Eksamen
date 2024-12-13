@@ -1,29 +1,105 @@
 <main>
   <h2>Priser</h2>
-  <article>
-    <div><img src="./img/IMG_4007.webp" alt="" /></div>
-    <div>
-      <h3>Forlængelse</h3>
-      <div class="priser_container">
-        <div>
-          <p>Forlængelse u. farve</p>
-          <p>Forlængelse m. farve</p>
-          <p>Forlængelse m. design (level 1)</p>
-          <p>Forlængelse m. design (level 2)</p>
-          <p>Forlængelse m. design (level 3)</p>
-          <p>Forlængelse - Freestyle</p>
-        </div>
-        <div class="behandlinger">
-          <p>DKK 625,-</p>
-          <p>DKK 650,-</p>
-          <p>DKK 700,-</p>
-          <p>DKK 750,-</p>
-          <p>DKK 850,-</p>
-          <p>DKK 725,-</p>
+  <section>
+    <article class="container1">
+      <div><img src="./img/IMG_4007.webp" alt="" /></div>
+      <div>
+        <h3>FORLÆNGELSE</h3>
+        <div class="priser_container">
+          <div>
+            <p>Forlængelse u. farve</p>
+            <p>Forlængelse m. farve</p>
+            <p>Forlængelse m. design (level 1)</p>
+            <p>Forlængelse m. design (level 2)</p>
+            <p>Forlængelse m. design (level 3)</p>
+            <p>Forlængelse - Freestyle</p>
+          </div>
+          <div>
+            <p>DKK 625,-</p>
+            <p>DKK 650,-</p>
+            <p>DKK 700,-</p>
+            <p>DKK 750,-</p>
+            <p>DKK 850,-</p>
+            <p>DKK 725,-</p>
+          </div>
         </div>
       </div>
-    </div>
-  </article>
+    </article>
+    <!--  Omvendt card 1 -->
+    <article class="container2">
+      <div>
+        <h3>GELPOLISH</h3>
+        <div class="priser_container_omvendt">
+          <div>
+            <p>Gelpolish helfarve inkl. manicure</p>
+            <p>Gelpolish inkl. manicure + design (level 1)</p>
+            <p>Gelpolish inkl. manicure + design (level 2)</p>
+            <p>Gelpolish inkl. manicure + design (level 3)</p>
+          </div>
+          <div>
+            <p>DKK 400,-</p>
+            <p>DKK 450,-</p>
+            <p>DKK 475,-</p>
+            <p>DKK 550,-</p>
+          </div>
+        </div>
+      </div>
+      <div><img src="./img/IMG_4010.webp" alt="" /></div>
+    </article>
+    <!--  Billede først card 2 -->
+    <article class="container1">
+      <div><img src="./img/IMG_4008.webp" alt="" /></div>
+      <div>
+        <h3>FORSTÆRKNING</h3>
+        <div class="priser_container">
+          <div>
+            <p>Forstærkning u. farve (nude)</p>
+            <p>Forstærkning m. farve</p>
+            <p>Forstærkning inkl. manicure + design (level 1)</p>
+            <p>Forstærkning inkl. manicure + design (level 2)</p>
+            <p>Forstærkning inkl. manicure + design (level 3)</p>
+            <p>Forstærkning - neglebider (u. design)</p>
+            <p>Forstærkning - Freestyle</p>
+          </div>
+          <div>
+            <p>DKK 600,-</p>
+            <p>DKK 625,-</p>
+            <p>DKK 650,-</p>
+            <p>DKK 700,-</p>
+            <p>DKK 750,-</p>
+            <p>DKK 500,-</p>
+            <p>DKK 675,-</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!--  Omvendt card 2 -->
+    <article class="container2">
+      <div>
+        <h3>OPFYLDNING</h3>
+        <div class="priser_container_omvendt">
+          <div>
+            <p>Opfyldning forlængelse u. farve + m. farve</p>
+            <p>Opfyldning forlængelse m. design (level 1-3)</p>
+            <p>Opfyldning forstærkning (alle på nær Freestyle)</p>
+            <p>Opfyldning forstærkning - Freestyle</p>
+            <p>Aftagning</p>
+            <p>Aftagning - Andens arbejde</p>
+          </div>
+          <div>
+            <p>Du sparer DKK 75,-</p>
+            <p>Du sparr DKK 100,-</p>
+            <p>Du sparer DKK 50,-</p>
+            <p>Du sparer DKK 15,-</p>
+            <p>DKK 100 - 170,-</p>
+            <p>DKK 170 - 200,-</p>
+          </div>
+        </div>
+      </div>
+      <div><img src="./img/naturlig.webp" alt="" /></div>
+    </article>
+  </section>
 </main>
 
 <style>
@@ -36,8 +112,23 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 3fr 1fr;
     column-gap: 4rem;
+    max-width: 800px;
+  }
+
+  .priser_container_omvendt {
+    border-style: solid;
+    border-color: #8e0928;
+    border-radius: 15px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 7rem;
+    max-width: 800px;
   }
 
   h3 {
@@ -52,9 +143,25 @@
     display: none;
   }
 
+  article {
+    padding-bottom: 2rem;
+  }
+
+  section {
+    padding-bottom: 4rem;
+  }
+
   @media (min-width: 750px) {
     .priser_container {
       border-radius: 20px;
+      justify-content: center;
+      margin-left: 6rem;
+    }
+
+    .priser_container_omvendt {
+      border-radius: 20px;
+      justify-content: center;
+      margin-right: 1rem;
     }
 
     img {
@@ -62,12 +169,17 @@
       height: 500px;
       display: block;
       border-radius: 20px;
-      padding-right: 2rem;
+      margin-top: 2rem;
     }
 
-    article {
+    .container1 {
       display: grid;
       grid-template-columns: 1fr 3fr;
+    }
+
+    .container2 {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
     }
   }
 </style>
