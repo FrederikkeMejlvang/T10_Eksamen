@@ -3,25 +3,23 @@
   <article>
     <div><img src="" alt="" /></div>
     <div>
-      <h3></h3>
+      <h3>Forlængelse</h3>
       <div class="priser_container">
         <div>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
+          <p>Forlængelse u. farve</p>
+          <p>Forlængelse m. farve</p>
+          <p>Forlængelse m. design (level 1)</p>
+          <p>Forlængelse m. design (level 2)</p>
+          <p>Forlængelse m. design (level 3)</p>
+          <p>Forlængelse - Freestyle</p>
         </div>
-        <div>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
+        <div class="behandlinger">
+          <p>DKK 625,-</p>
+          <p>DKK 650,-</p>
+          <p>DKK 700,-</p>
+          <p>DKK 750,-</p>
+          <p>DKK 850,-</p>
+          <p>DKK 725,-</p>
         </div>
       </div>
     </div>
@@ -32,6 +30,26 @@
   .priser_container {
     border-style: solid;
     border-color: #8e0928;
-    border-radius: 5px;
+    border-radius: 15px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    column-gap: 4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  h3 {
+    color: #8e0928;
+    text-align: center;
+  }
+
+  @media (min-width: 750px) {
+    .priser_container {
+      border-radius: 20px;
+    }
   }
 </style>
