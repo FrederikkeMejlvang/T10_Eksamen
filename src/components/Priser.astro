@@ -1,7 +1,7 @@
 <main>
   <h2>Priser</h2>
   <article>
-    <div><img src="" alt="" /></div>
+    <div><img src="./img/IMG_4007.webp" alt="" /></div>
     <div>
       <h3>Forlængelse</h3>
       <div class="priser_container">
@@ -38,18 +38,36 @@
     display: grid;
     grid-template-columns: 4fr 1fr;
     column-gap: 4rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
   }
 
   h3 {
-    color: #8e0928;
     text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  img {
+    display: none;
   }
 
   @media (min-width: 750px) {
     .priser_container {
       border-radius: 20px;
+    }
+
+    img {
+      width: 380px;
+      height: 500px;
+      display: block;
+      border-radius: 20px;
+      padding-right: 2rem;
+    }
+
+    article {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
     }
   }
 </style>
