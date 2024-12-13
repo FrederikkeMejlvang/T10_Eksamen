@@ -24,6 +24,31 @@
       </div>
     </div>
   </article>
+  <!--  Omvendte cards -->
+  <article>
+    <div>
+      <h3>Forlængelse</h3>
+      <div class="priser_container">
+        <div>
+          <p>Forlængelse u. farve</p>
+          <p>Forlængelse m. farve</p>
+          <p>Forlængelse m. design (level 1)</p>
+          <p>Forlængelse m. design (level 2)</p>
+          <p>Forlængelse m. design (level 3)</p>
+          <p>Forlængelse - Freestyle</p>
+        </div>
+        <div class="behandlinger">
+          <p>DKK 625,-</p>
+          <p>DKK 650,-</p>
+          <p>DKK 700,-</p>
+          <p>DKK 750,-</p>
+          <p>DKK 850,-</p>
+          <p>DKK 725,-</p>
+        </div>
+      </div>
+    </div>
+    <div><img src="./img/IMG_4007.webp" alt="" /></div>
+  </article>
 </main>
 
 <style>
@@ -38,6 +63,7 @@
     display: grid;
     grid-template-columns: 4fr 1fr;
     column-gap: 4rem;
+    max-width: 600px;
   }
 
   h3 {
@@ -52,9 +78,15 @@
     display: none;
   }
 
+  article {
+    padding-bottom: 2rem;
+  }
+
   @media (min-width: 750px) {
     .priser_container {
       border-radius: 20px;
+      justify-content: center;
+      margin-left: 6rem;
     }
 
     img {
@@ -62,7 +94,7 @@
       height: 500px;
       display: block;
       border-radius: 20px;
-      padding-right: 2rem;
+      margin-top: 2rem;
     }
 
     article {
