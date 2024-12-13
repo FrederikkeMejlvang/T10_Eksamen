@@ -1,0 +1,19 @@
+---
+const {header, img, tid, pris, data} = Astro.props;
+import Button from "../components/Button.astro"
+---
+
+<article>
+    <h5>{data.navn}</h5>
+    <img src="" alt="">
+    <p>TID: {data.tid}</p>
+    <p>PRIS: DKK {data.pris},-</p>
+    <Button variant="primary" size="desktop">BESTIL TID</Button>
+</article>
+
+<style>
+    article{
+        border: 3px solid var(--rød-100);
+        border-radius: var(--border-radius-desktop);
+    }
+</style>

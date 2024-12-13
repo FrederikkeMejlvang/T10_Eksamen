@@ -1,7 +1,37 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
+import Card_behandling from "../components/Card_behandling.astro";
+import Button from "../components/Button.astro"
+const {title} = Astro.props;
+const data = await fetch("https://rnozbkgkboarnfasijrg.supabase.co/rest/v1/Data", {
+    method: "GET", 
+    headers: {
+        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJub3pia2drYm9hcm5mYXNpanJnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzMyMzE0NTQsImV4cCI6MjA0ODgwNzQ1NH0.NL-tN_oAaXF7R0oGijdehXdp2tCSdhyxiQYB10oubvo"
+    },
+}).then(res=>res.json());
+
+console.log(data);
 ---
 
+
 <MainLayout>
-    
+    <h2>{title}</h2>
+    <Button variant="primary" size="desktop">TILBAGE</Button>
+    <section class="card_container">
+        {data.map(behandling=>{
+            return <Card_behandling data={behandling}/>
+        })}
+</section>
 </MainLayout>
+
+<style>
+    .card_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 50px;
+    }
+</style>
+
+
+
+          
