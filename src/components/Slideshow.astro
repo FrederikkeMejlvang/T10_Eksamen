@@ -93,4 +93,37 @@
   .karrusel-next {
     position: absolute;
     top: 50%;
-    transform: translateY(-
+    transform: translateY(-50%);
+    /*  background-color: none; */
+  /*   color: #34170d;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 50px;
+    border-radius: 50%;
+    z-index: 1;
+  }  */
+
+  .karrusel-item {
+    flex: 0 0 33.33%; /* Viser 3 billeder samtidig */
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  .karrusel-item img {
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+  }
+  .follow_knap {
+    display: flex;
+  }
+  .follow_knap button {
+    justify-content: right;
+  }
+
+  @media (min-width: 750px) {
+    .karrusel-item img :hover {
+      color: rgba(202, 202, 202, 0.621);
+    }
+  }
+</style>
