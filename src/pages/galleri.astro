@@ -3,5 +3,71 @@ import MainLayout from "../layout/MainLayout.astro";
 ---
 
 <MainLayout>
-    
+  <h2>GALLERI</h2>
+  <section class="grid">
+    <div class="container">
+      <img src="./img/IMG_4013.webp" alt="" />
+      <div class="overlay">
+        <p>FORLÆNGELSE M. DESIGN (LEVEL 2) DKK 750,- ✨</p>
+      </div>
+    </div>
+    <div><img src="./img/IMG_4014.webp" alt="" /></div>
+    <div><img src="./img/IMG_4012.webp" alt="" /></div>
+    <div><img src="./img/IMG_4010.webp" alt="" /></div>
+    <div><img src="./img/IMG_4009.webp" alt="" /></div>
+    <div><img src="./img/IMG_4008.webp" alt="" /></div>
+    <div><img src="./img/IMG_4007.webp" alt="" /></div>
+    <div><img src="./img/IMG_4006.webp" alt="" /></div>
+    <div><img src="./img/IMG_4014.webp" alt="" /></div>
+    <div><img src="./img/IMG_4014.webp" alt="" /></div>
+    <div><img src="./img/IMG_4014.webp" alt="" /></div>
+    <div><img src="./img/IMG_4014.webp" alt="" /></div>
+    <div><img src="./img/IMG_4014.webp" alt="" /></div>
+    <div><img src="./img/IMG_4014.webp" alt="" /></div>
+    <div><img src="./img/IMG_4014.webp" alt="" /></div>
+  </section>
 </MainLayout>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem;
+  }
+
+  img {
+    width: 130px;
+    height: 130px;
+    display: block;
+  }
+
+  @media (min-width: 750px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    img {
+      width: 380px;
+      height: 380px;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: 0.5s ease;
+      background-color: #fcf8ecb8;
+    }
+
+    .container:hover .overlay {
+      opacity: 1;
+    }
+  }
+</style>
