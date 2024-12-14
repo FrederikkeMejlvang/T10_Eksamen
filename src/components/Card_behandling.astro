@@ -6,11 +6,15 @@ import Button from "../components/Button.astro"
 
 <article>
     <h5>{data.navn}</h5>
-    <img src="" alt="">
+    <img src="../public/img/IMG_4009.webp" alt="">
+    <div class="mobile_layout">
+        <div>
     <p>TID: {data.tid}</p>
     <p>PRIS: DKK {data.pris},-</p>
-    <a href={`behandlinger/${data.slug}`}>
-    <Button variant="primary" size="desktop">BESTIL TID</Button>
+</div>
+    <a class="button_wrapper" href={`behandlinger/${data.slug}`}>
+    <Button variant="secondary">BESTIL TID</Button>
+</div>
 </a>
 </article>
 
@@ -19,5 +23,54 @@ import Button from "../components/Button.astro"
     article{
         border: 3px solid var(--rød-100);
         border-radius: var(--border-radius-desktop);
+    }
+    img{
+        border: 3px solid var(--rød-100);
+        border-radius: var(--border-radius-desktop);
+        margin: 20px;
+        max-width: calc(100% - 40px);
+        box-sizing: border-box;
+    }
+    p{
+        margin: 20px;
+    }
+    h5{
+        margin: 20px;
+        min-height: 72px; 
+    }
+    .button_wrapper{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width:900px) {
+        article{
+            border: 2px solid var(--rød-100);
+            border-radius: 15px;
+        }
+        img{
+            display: none;
+        }
+        p{
+            margin-bottom: 0px;
+            margin-top: 10px;
+        }
+        h5{
+            min-height: 30px;
+            margin-bottom: 10px;
+        }
+
+        .mobile_layout{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            margin-bottom: 20px;
+        }
+        .button_wrapper{
+            margin-right: 20px;
+            margin-left: auto;
+            margin-bottom: 0px;
+        }
     }
 </style>

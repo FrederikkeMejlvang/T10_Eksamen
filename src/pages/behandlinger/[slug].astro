@@ -22,27 +22,32 @@ console.log(myData);
 ---
 
 <MainLayout title={myData["navn"]}>
-    <a href="../listview"><Button variant="primary" size="desktop">TILBAGE</Button></a>
+    <a href="../listview"><Button variant="primary">TILBAGE</Button></a>
     <h2>{myData["navn"]}</h2>
     <section class="item_info">
         <div class="sideA">
-            <img src="../../../public/img/IMG_4006.webp" alt="" class="img1">
-            <img src="../../../public/img/IMG_4006.webp" alt="" class="img2">
-            <img src="../../../public/img/IMG_4006.webp" alt="" class="img3">
-            <img src="../../../public/img/IMG_4006.webp" alt="" class="img4">
+            <img src="../../../public/img/IMG_4007.webp" alt="" class="img1">
+            <img src="../../../public/img/IMG_4009.webp" alt="" class="img2">
+            <img src="../../../public/img/IMG_4010.webp" alt="" class="img3">
+            <img src="../../../public/img/IMG_4012.webp" alt="" class="img4">
         </div>
         <div class="sideB">
         <div class="text_box">
-            <h5>TID</h5>
+            <h5>TID:</h5>
             <p>{myData["tid"]}</p>
-            <h5>PRIS</h5>
+            <h5>PRIS:</h5>
             <p>DKK {myData["pris"]},-</p>
-            <h5>VIGTIG INFO</h5>
+            <h5>VIGTIG INFO:</h5>
             <p>{myData["info"]}</p>
         </div>
-        <Button variant="primary" size="desktop">DATO</Button>
-        <Button variant="primary" size="desktop">TID</Button>
-        <Button variant="secondary" size="desktop">BESTIL TID</Button>
+        <div class="buttons">
+        <Button variant="primary">DATO</Button>
+        <Button variant="primary">TID</Button>
+        <div class="right">
+        <Button variant="secondary">BESTIL TID</Button>
+    </div>
+    </div>
+    </div>
     </div>
     </section>
 
@@ -58,6 +63,15 @@ console.log(myData);
         display: grid;
         column-gap: 20px;
         row-gap: 20px;
+    }
+    h5{
+        margin-left: 40px;
+        margin-block-end: 10px;
+        color: var(--brun-100);
+    }
+    p{
+        margin: 40px;
+        margin-block-start: 10px;
     }
     .img1{
         grid-column: 1/4;
@@ -78,5 +92,14 @@ console.log(myData);
     .text_box{
         border: 3px solid var(--rød-100);
         border-radius: var(--border-radius-desktop);
+    }
+    .buttons{
+        margin-top: 40px;
+        gap: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .right{
+        margin-left: auto;
     }
 </style>
