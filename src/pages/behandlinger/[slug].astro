@@ -9,7 +9,7 @@ export async function getStaticPaths() {
     },
 }).then(response => response.json());
 
-  return data.map((behandling) => {
+  return data.map((behandling: { slug: any; }) => {
     return {
       params: { slug: behandling.slug },
       props: { myData: behandling },
