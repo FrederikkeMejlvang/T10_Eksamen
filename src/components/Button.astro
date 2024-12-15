@@ -1,35 +1,58 @@
 --- 
-const {variant, size} = Astro.props;
+const {variant} = Astro.props;
 ---
 
-<button class:list={[variant, size]}>
+<button class:list={[variant]}>
     <slot />
 </button>
 
 <style>
-    .desktop{
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-top: 15px;
-        padding-bottom: 15px; 
+    button{
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 24px ;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 7.5px;
+        padding-bottom: 7.5px; 
         border-radius: 20px;
     }
-    .mobile{
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-top: 2px;
-        padding-bottom: 2px; 
-        border-radius: 15px;
+    @media (max-width:900px) {
+        button{
+            font-size: 14px ;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 2px;
+            padding-bottom: 2px; 
+            border-radius: 15px;
+        }
     }
+
     .primary{
         background-color: var(--hvid-100);
         color: var(--rød-100);
         border: 3px solid var(--rød-100);
     }
-
     .secondary{
         background-color: var(--rød-100);
         border: 3px solid var(--rød-100);
         color: var(--hvid-100);
+    }
+    button:hover{
+        background-color: var(--brun-100);
+        color: var(--hvid-100);
+        border: 3px solid var(--brun-100);
+    }
+    @media (max-width:900px) {
+        .primary{
+            border: 2px solid var(--rød-100);
+        }
+        .secondary{
+            border: 3px solid var(--rød-100);
+        }
+        .button:hover{
+            border: 2px solid var(--brun-100);
+        }
     }
 </style>

@@ -14,10 +14,9 @@ console.log(data);
 ---
 
 
-<MainLayout>
-    <h2>{title}</h2>
-    <a href="/">
-    <Button variant="primary" size="desktop">TILBAGE</Button></a>
+<MainLayout title="Behandlinger">
+    <h2>BEHANDLINGER</h2>
+    <Button variant="primary">VÆLG KATEGORI</Button>
     <section class="card_container">
         {data.map(behandling=>{
             return <Card_behandling data={behandling}/>
@@ -30,6 +29,20 @@ console.log(data);
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 50px;
+        row-gap: 50px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    h2{
+        margin-block-end: 20px;
+    }
+    @media (max-width:900px){
+        .card_container{
+            grid-template-columns: 1fr;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            row-gap: 20px;
+        }
     }
 </style>
 

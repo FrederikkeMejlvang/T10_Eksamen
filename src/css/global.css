@@ -1,6 +1,11 @@
 body {
   margin: 100px;
 }
+@media (max-width: 900px) {
+  body {
+    margin: 20px;
+  }
+}
 img {
   width: 100%;
   height: auto;
@@ -24,7 +29,7 @@ html {
   --font-size-h5: 24px;
   --font-size-p: 20px;
   --font-size-h1-mobil: 32px;
-  --font-size-h2-mobil: 20px;
+  --font-size-h2-mobil: 32px;
   --font-size-h3-mobil: 16px;
   --font-size-p-mobil: 16px;
   --font-size-p-tiny: 14px;
@@ -44,7 +49,6 @@ h1,
 h2,
 h3,
 h4,
-h5,
 h1.mobil,
 h2.mobil,
 h3.mobil,
@@ -54,7 +58,8 @@ p.knap {
 }
 
 p,
-p.tiny {
+p.tiny,
+h5 {
   color: var(--brun-100);
 }
 
@@ -69,7 +74,6 @@ h2.mobil {
 
 h3,
 h4,
-h5,
 p,
 h3.mobil,
 p.knap,
@@ -104,34 +108,30 @@ h4 {
 
 h5 {
   font-size: var(--font-size-h5);
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 p {
   font-size: var(--font-size-p);
 }
 
-h1.mobil {
-  font-size: var(--font-size-h1-mobil);
-}
-
-h2.mobil {
-  font-size: var(--font-size-h2-mobil);
-}
-
-h3.mobil {
-  font-size: var(--font-size-h3-mobil);
-}
-
-p.mobil {
-  font-size: var(--font-size-p-mobil);
-}
-
-p.tiny {
-  font-size: var(--font-size-p-tiny);
-}
-
-p.knap {
-  font-size: var(--font-size-p-knap);
+@media (max-width: 900px) {
+  h1 {
+    font-size: var(--font-size-h1-mobil);
+  }
+  h2 {
+    font-size: var(--font-size-h2-mobil);
+  }
+  h3,
+  h4,
+  h5 {
+    font-size: var(--font-size-h3-mobil);
+  }
+  p {
+    font-size: var(--font-size-p-mobil);
+  }
 }
 
 ul {
@@ -142,4 +142,8 @@ img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+a {
+  text-decoration: none;
 }
