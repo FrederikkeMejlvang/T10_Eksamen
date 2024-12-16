@@ -1,22 +1,68 @@
-<header>
+<header class="header">
   <div class="logo">
     <a href="/index">
-      <img src="" alt="Logo" />
+      <img src="/img/logo.svg" alt="Logo" />
     </a>
   </div>
 
-  <nav>
-    <ul class="menu">
-      <li>
-        <a href="">BESTIL TID</a>
-      </li>
+  <nav class="menu">
+    <ul>
       <li><a href="/index">HJEM</a></li>
       <li><a href="/galleri">GALLERI</a></li>
+      <li>
+        <a href="/bestil" class="btn">BESTIL TID &#x3e;</a>
+      </li>
     </ul>
   </nav>
-  <div class="burger">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-  </div>
 </header>
+
+<hr class="line" />
+
+<style>
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .logo img {
+    width: 50%;
+    height: auto;
+  }
+
+  .menu ul {
+    list-style: none;
+    display: flex;
+    gap: 60px;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: var(--rød-100);
+    font-family: "Poppins", sans-serif;
+    font-size: var(--font-size-h4);
+  }
+
+  /* Hvid tekst kun til knappen */
+  .menu a.btn {
+    color: #ffffff;
+  }
+
+  .btn {
+    background-color: #8e0928;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .line {
+    border: none;
+    height: 2px;
+    background-color: var(--rød-100);
+  }
+</style>
