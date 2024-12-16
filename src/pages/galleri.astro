@@ -12,19 +12,25 @@ import MainLayout from "../layout/MainLayout.astro";
       </div>
     </div>
     <div class="container">
-      <img src="./img/IMG_4014.webp" alt="" />
-      <div class="overlay">
-        <p>FORLÆNGELSE M. DESIGN (LEVEL 2) DKK 750,- ✨</p>
-      </div>
-    </div>
-    <div>
       <img src="./img/IMG_4012.webp" alt="" />
       <div class="overlay">
         <p>FORLÆNGELSE M. DESIGN (LEVEL 2) DKK 750,- ✨</p>
       </div>
     </div>
     <div class="container">
+      <img src="./img/IMG_3938.webp" alt="" />
+      <div class="overlay">
+        <p>FORLÆNGELSE M. DESIGN (LEVEL 2) DKK 750,- ✨</p>
+      </div>
+    </div>
+    <div class="container">
       <img src="./img/IMG_4010.webp" alt="" />
+      <div class="overlay">
+        <p>FORLÆNGELSE M. DESIGN (LEVEL 2) DKK 750,- ✨</p>
+      </div>
+    </div>
+    <div class="container">
+      <img src="./img/IMG_4014.webp" alt="" />
       <div class="overlay">
         <p>FORLÆNGELSE M. DESIGN (LEVEL 2) DKK 750,- ✨</p>
       </div>
@@ -42,37 +48,19 @@ import MainLayout from "../layout/MainLayout.astro";
       </div>
     </div>
     <div class="container">
-      <img src="./img/IMG_4007.webp" alt="" />
-      <div class="overlay">
-        <p>FORLÆNGELSE M. DESIGN (LEVEL 2) DKK 750,- ✨</p>
-      </div>
-    </div>
-    <div class="container">
       <img src="./img/IMG_4006.webp" alt="" />
       <div class="overlay">
         <p>FORLÆNGELSE M. DESIGN (LEVEL 2) DKK 750,- ✨</p>
       </div>
     </div>
     <div class="container">
-      <img src="./img/IMG_3932.webp" alt="" />
+      <img src="./img/IMG_4007.webp" alt="" />
       <div class="overlay">
         <p>FORLÆNGELSE M. DESIGN (LEVEL 2) DKK 750,- ✨</p>
       </div>
     </div>
     <div class="container">
-      <img src="./img/IMG_3933.webp" alt="" />
-      <div class="overlay">
-        <p>FORLÆNGELSE M. DESIGN (LEVEL 2) DKK 750,- ✨</p>
-      </div>
-    </div>
-    <div class="container">
-      <img src="./img/IMG_3934.webp" alt="" />
-      <div class="overlay">
-        <p>FORLÆNGELSE M. DESIGN (LEVEL 2) DKK 750,- ✨</p>
-      </div>
-    </div>
-    <div class="container">
-      <img src="./img/IMG_3935.webp" alt="" />
+      <img src="./img/IMG_3939.webp" alt="" />
       <div class="overlay">
         <p>FORLÆNGELSE M. DESIGN (LEVEL 2) DKK 750,- ✨</p>
       </div>
@@ -84,19 +72,27 @@ import MainLayout from "../layout/MainLayout.astro";
       </div>
     </div>
     <div class="container">
-      <img src="./img/IMG_3937.webp" alt="" />
+      <img src="./img/IMG_3935.webp" alt="" />
+      <div class="overlay">
+        <p>FORLÆNGELSE M. DESIGN (LEVEL 2) DKK 750,- ✨</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <img src="./img/IMG_3934.webp" alt="" />
+      <div class="overlay">
+        <p>FORLÆNGELSE M. DESIGN (LEVEL 2) DKK 750,- ✨</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <img src="./img/IMG_3933.webp" alt="" />
       <div class="overlay">
         <p>FORLÆNGELSE M. DESIGN (LEVEL 2) DKK 750,- ✨</p>
       </div>
     </div>
     <div class="container">
-      <img src="./img/IMG_3938.webp" alt="" />
-      <div class="overlay">
-        <p>FORLÆNGELSE M. DESIGN (LEVEL 2) DKK 750,- ✨</p>
-      </div>
-    </div>
-    <div class="container">
-      <img src="./img/IMG_3939.webp" alt="" />
+      <img src="./img/IMG_3932.webp" alt="" />
       <div class="overlay">
         <p>FORLÆNGELSE M. DESIGN (LEVEL 2) DKK 750,- ✨</p>
       </div>
@@ -112,15 +108,22 @@ import MainLayout from "../layout/MainLayout.astro";
     margin: 1rem;
   }
 
+  .container {
+    position: relative;
+  }
+
   img {
     width: 130px;
     height: 130px;
     display: block;
+    object-fit: cover;
   }
 
-  @media (min-width: 750px) {
+  .overlay {
+    display: none;
+  }
+  @media (min-width: 900px) {
     .grid {
-      display: grid;
       grid-template-columns: 1fr 1fr 1fr;
     }
 
@@ -132,18 +135,27 @@ import MainLayout from "../layout/MainLayout.astro";
     .overlay {
       position: absolute;
       top: 0;
-      bottom: 0;
       left: 0;
       right: 0;
-      height: 100%;
-      width: 100%;
+      bottom: 0;
+      background-color: rgba(252, 248, 236, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
       opacity: 0;
-      transition: 0.5s ease;
-      background-color: #fcf8ecb8;
+      transition: opacity 0.5s ease;
     }
 
     .container:hover .overlay {
       opacity: 1;
+    }
+
+    .overlay p {
+      color: #34170d;
+      font-size: 1.2rem;
+      text-align: center;
+      padding: 10px;
+      margin: 1rem;
     }
   }
 </style>
