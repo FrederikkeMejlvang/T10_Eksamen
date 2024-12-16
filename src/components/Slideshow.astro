@@ -1,51 +1,46 @@
----
-import MainLayout from "../layout/MainLayout.astro";
----
-
-<MainLayout>
-  <main>
-    <article class="follow_knap">
-      <div class="knapogoverskrift">
-        <h2>Galleri</h2>
-        <a
-          href="https://www.instagram.com/elisabethnails?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-        >
-          <button>Følg os her </button>
+<section>
+  <article class="follow_knap">
+    <div class="knapogoverskrift">
+      <h2>Galleri</h2>
+      <a
+        href="https://www.instagram.com/elisabethnails?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+      >
+        <button>Følg os her </button>
+      </a>
+    </div>
+  </article>
+  <article class="karrusel-container">
+    <!--   <button class="karrusel-prev" onclick="moveSlide(-1)">&#10094;</button> -->
+    <div class="karrusel-slide">
+      <div class="karrusel-item">
+        <a href="../pages/galleri.astro">
+          <img src="./img/IMG_4006.webp" alt="" />
         </a>
       </div>
-    </article>
-    <article class="karrusel-container">
-      <!--   <button class="karrusel-prev" onclick="moveSlide(-1)">&#10094;</button> -->
-      <div class="karrusel-slide">
-        <div class="karrusel-item">
-          <a href="../pages/galleri.astro">
-            <img src="./img/IMG_4006.webp" alt="" />
-          </a>
-        </div>
-      </div>
-    </article>
-    <div class="karrusel-item">
-      <img src="./img/IMG_4008.webp" alt="" />
     </div>
-    <div class="karrusel-item">
-      <img src="./img/IMG_4009.webp" alt="" />
-    </div>
-    <div class="karrusel-item">
-      <img src="./img/IMG_4010.webp" alt="" />
-    </div>
-    <div class="karrusel-item">
-      <img src="./img/IMG_4012.webp" alt="" />
-    </div>
-    <div class="karrusel-item">
-      <img src="./img/IMG_4013.webp" alt="" />
-    </div>
-    <div class="karrusel-item">
-      <img src="./img/IMG_4014.webp" alt="" />
-    </div>
+  </article>
+  <div class="karrusel-item">
+    <img src="./img/IMG_4008.webp" alt="" />
+  </div>
+  <div class="karrusel-item">
+    <img src="./img/IMG_4009.webp" alt="" />
+  </div>
+  <div class="karrusel-item">
+    <img src="./img/IMG_4010.webp" alt="" />
+  </div>
+  <div class="karrusel-item">
+    <img src="./img/IMG_4012.webp" alt="" />
+  </div>
+  <div class="karrusel-item">
+    <img src="./img/IMG_4013.webp" alt="" />
+  </div>
+  <div class="karrusel-item">
+    <img src="./img/IMG_4014.webp" alt="" />
+  </div>
 
-    <!--      plads til flere billeder her  -->
-  </main>
-</MainLayout>
+  <!--      plads til flere billeder her  -->
+</section>
+
 <!--     <button class="karrusel-next" onclick="moveSlide(1)">&#10095;</button> -->
 
 <style>
@@ -60,7 +55,7 @@ import MainLayout from "../layout/MainLayout.astro";
     object-fit: cover;
   }
 
-  main {
+  section {
     background-color: #8e0928;
     margin-top: 1rem;
     margin-bottom: 3rem;
@@ -107,7 +102,7 @@ import MainLayout from "../layout/MainLayout.astro";
     text-align: center;
   } */
   @media (min-width: 750px) {
-    main {
+    section {
       background-color: #8e0928;
       margin-top: 1rem;
       margin-bottom: 2rem;
