@@ -18,7 +18,6 @@ export async function getStaticPaths() {
 }
 
 const {myData} = Astro.props;
-console.log(myData);
 ---
 
 <MainLayout title={myData["navn"]}>
@@ -26,10 +25,10 @@ console.log(myData);
     <h2>{myData["navn"]}</h2>
     <section class="item_info">
         <div class="sideA">
-            <img src="../../../public/img/IMG_4007.webp" alt="" class="img1">
-            <img src="../../../public/img/IMG_4009.webp" alt="" class="img2">
-            <img src="../../../public/img/IMG_4010.webp" alt="" class="img3">
-            <img src="../../../public/img/IMG_4012.webp" alt="" class="img4">
+            <img src=`../public/img/${myData["img"]}` alt="Billede af negle" class="img1">
+            <img src="../../../public/img/IMG_5490.webp" alt="" class="img2">
+            <img src="../../../public/img/IMG_5491.webp" alt="" class="img3">
+            <img src="../../../public/img/IMG_5492.webp" alt="" class="img4">
         </div>
         <div class="sideB">
         <div class="text_box">
@@ -63,6 +62,7 @@ console.log(myData);
         display: grid;
         column-gap: 20px;
         row-gap: 20px;
+        align-content: flex-start;
     }
     h5{
         margin-left: 40px;
@@ -75,19 +75,19 @@ console.log(myData);
     }
     .img1{
         grid-column: 1/4;
-        grid-row: 1/2;
+        grid-row: 1;
     }
     .img2{
         grid-column: 1;
-        grid-row: 3;
+        grid-row: 2;
     }
     .img3{
         grid-column: 2;
-        grid-row: 3;
+        grid-row: 2;
     }
     .img4{
         grid-column: 3;
-        grid-row: 3;
+        grid-row: 2;
     }
     .text_box{
         border: 3px solid var(--rød-100);
@@ -102,4 +102,37 @@ console.log(myData);
     .right{
         margin-left: auto;
     }
+
+    @media (max-width:900px){
+    .img1{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .img2{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .img3{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .img4{
+        grid-column: 1;
+        grid-row: 4;
+    } 
+    .item_info{
+        column-gap: 20px
+        
+    }
+    p{
+        margin: 20px;
+        margin-block-start: 10px;
+    }
+    .buttons{
+        margin-top: 20px;
+        flex-direction: column;
+        column-gap: 20px;
+    }
+
+}
 </style>
