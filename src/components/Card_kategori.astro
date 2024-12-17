@@ -1,40 +1,41 @@
-<main>
-  <section>
-    <article class="kategori_container">
-      <a href="../ListView">
-        <img src="./img/IMG_4008.webp" alt="" />
-        <div><h4>FORLÆNGELSE</h4></div>
-      </a>
-    </article>
-    <article class="kategori_container">
-      <a href="../ListView"></a>
+<section class="kategori_section">
+  <article class="kategori_container">
+    <a href="../ListView">
+      <img src="./img/IMG_4008.webp" alt="" />
+      <div><h4>FORLÆNGELSE</h4></div>
+    </a>
+  </article>
+  <article class="kategori_container">
+    <a href="../ListView">
       <img src="./img/IMG_4007.webp" alt="" />
       <div><h4>GELPOLISH</h4></div>
-    </article>
-  </section>
-  <article class="kategori_container">
-    <a href="../ListView"></a>
-    <img src="./img/IMG_4009.webp" alt="" />
-    <div><h4>FORSTÆRKNING</h4></div>
+    </a>
   </article>
-</main>
-<article class="kategori_container">
-  <a href="../ListView"></a>
-  <img src="./img/IMG_4010.webp" alt="" />
-  <div><h4>OPFYLD: FORLÆNG</h4></div>
-</article>
-
-<article class="kategori_container">
-  <a href="../ListView"></a>
-  <img src="./img/IMG_4006.webp" alt="" />
-  <div><h4>OPFYLD: FORSTÆRK</h4></div>
-</article>
-
-<article class="kategori_container">
-  <a href="../ListView"></a>
-  <img src="./img/naturlig.webp" alt="" />
-  <div><h4>AFTAGNING</h4></div>
-</article>
+  <article class="kategori_container">
+    <a href="../ListView">
+      <img src="./img/IMG_4009.webp" alt="" />
+      <div><h4>FORSTÆRKNING</h4></div>
+    </a>
+  </article>
+  <article class="kategori_container">
+    <a href="../ListView">
+      <img src="./img/IMG_4010.webp" alt="" />
+      <div><h4>OPFYLD: FORLÆNG</h4></div>
+    </a>
+  </article>
+  <article class="kategori_container">
+    <a href="../ListView">
+      <img src="./img/IMG_4006.webp" alt="" />
+      <div><h4>OPFYLD: FORSTÆRK</h4></div>
+    </a>
+  </article>
+  <article class="kategori_container">
+    <a href="../ListView">
+      <img src="./img/naturlig.webp" alt="" />
+      <div><h4>AFTAGNING</h4></div>
+    </a>
+  </article>
+</section>
 
 <style>
   img {
@@ -51,6 +52,7 @@
     border-radius: 15px;
     cursor: pointer;
     margin: 1rem;
+    position: relative;
   }
 
   div {
@@ -71,9 +73,10 @@
     background-color: #34170d;
   }
 
-  section {
+  .kategori_section {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 
   h4 {
@@ -81,13 +84,15 @@
     text-align: center;
     font-size: 14px;
   }
+
+  a {
+    cursor: pointer;
+  }
+
   @media (min-width: 900px) {
     img {
       width: 380px;
       height: 378px;
-      z-index: 0;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
     }
 
     h4 {
@@ -103,10 +108,10 @@
       margin-bottom: 2rem;
     }
 
-    section {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+    .kategori_section {
+      grid-template-columns: repeat(3, 1fr);
     }
+
     div {
       position: absolute;
       width: 348px;
