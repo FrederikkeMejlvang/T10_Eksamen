@@ -10,7 +10,7 @@
     <ul class="nav-menu">
       <li class="nav-item"><a href="../index" class="nav-link">HJEM</a></li>
       <li class="nav-item">
-        <hr class="line" />
+        <hr class="line_mobil" />
         <a href="../galleri" class="nav-link">GALLERI</a>
       </li>
 
@@ -103,6 +103,10 @@
     display: flex;
     gap: 60px;
   }
+
+  .line_mobil {
+    display: none;
+  }
   @media (max-width: 900px) {
     .nav-menu {
       position: fixed;
@@ -117,6 +121,12 @@
       z-index: 3;
       padding-top: 2rem;
       padding-bottom: 2rem;
+    }
+
+    .line_mobil {
+      border: none;
+      height: 2px;
+      background-color: var(--rød-100);
     }
 
     .btn {
