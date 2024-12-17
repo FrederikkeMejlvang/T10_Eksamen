@@ -1,7 +1,7 @@
 <header class="header">
   <div class="logo">
     <a href="/">
-      <img src="/img/logo.svg" alt="Logo" />
+      <img src="/img/logo.svg" alt="Elisabeth Nails Logo" />
     </a>
   </div>
 
@@ -105,6 +105,27 @@
     display: flex;
     gap: 60px;
   }
+
+  .menu a.nav-link {
+    text-decoration: none;
+    color: var(--rød-100);
+    transition: color 0.3s ease;
+  }
+  .menu a.nav-link.active {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+    color: var(--rød-100);
+  }
+
+  .menu a.nav-link:not(.active):hover {
+    color: var(--brun-100);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+  }
+
+  /* Det virker kun på hjem, men reglerne overgår knappen nu, så den bliver påvirket på samme måde som hjem og galleri.. */
 
   .line_mobil {
     display: none;
