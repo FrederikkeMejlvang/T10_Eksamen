@@ -113,8 +113,10 @@ import MainLayout from "../layout/MainLayout.astro";
   }
 
   img {
-    width: 130px;
-    height: 130px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    max-width: 380px;
+    object-fit: cover;
     display: block;
     object-fit: cover;
   }
@@ -125,11 +127,6 @@ import MainLayout from "../layout/MainLayout.astro";
   @media (min-width: 900px) {
     .grid {
       grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    img {
-      width: 380px;
-      height: 380px;
     }
 
     .overlay {
