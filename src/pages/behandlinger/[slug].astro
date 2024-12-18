@@ -21,11 +21,11 @@ const {myData} = Astro.props;
 ---
 
 <MainLayout title={myData["navn"]}>
-    <a href="/listview"><Button variant="primary">TILBAGE</Button></a>
+    <a href="/../listview"><Button variant="primary">TILBAGE</Button></a>
     <h2>{myData["navn"]}</h2>
     <section class="item_info">
         <div class="sideA">
-            <img src=`../../img/${myData["img"]}` alt="Billede af negle" class="img1">
+            <img src=`/img/${myData["img"]}` alt="Billede af negle" class="img1">
             <img src="../../../img/IMG_5490.webp" alt="" class="img2">
             <img src="../../../img/IMG_5491.webp" alt="" class="img3">
             <img src="../../../img/IMG_5492.webp" alt="" class="img4">
