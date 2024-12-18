@@ -1,4 +1,7 @@
 <footer>
+  <hr class="line">
+  <section>
+    <article>
     <div class="logo">
         <a href="/">
           <img src="/img/logo.svg" alt="Elisabeth Nails Logo" />
@@ -12,6 +15,7 @@
     <img src="" alt="tiktok">
 </a>
       </div>
+    </article>
       <div class="adresse">
         <h4>Adresse</h4>
         <p>Guldbergsgade 29N</p>
@@ -25,10 +29,11 @@
       <div class="kontakt">
         <h4>Kontakt</h4>
         <p>info@elisabethnails.dk</p>
+        <li class="nav-item">
+          <a href="/ListView" class="nav-link btn">BESTIL TID &#x3e;</a>
+        </li>
       </div>
-      <li class="nav-item">
-        <a href="/ListView" class="nav-link btn">BESTIL TID &#x3e;</a>
-      </li>
+    </section>
 </footer>
 
 <style>
@@ -43,7 +48,7 @@
     
   }
 li{
-  text-decoration: none;
+  list-style: none;
 }
   .btn:hover {
     background-color: #34170d;
@@ -51,4 +56,24 @@ li{
   img {
     width: 100px;
   }
+
+
+  @media (min-width: 900px) {
+section {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.line {
+  margin-top: 10rem;
+      border: none;
+      height: 2px;
+      background-color: rgb(220, 218, 211, 0.8);
+      display: block;
+    }
+    .logo{
+      margin-top: 3rem;
+    }
+  }
+
 </style>
