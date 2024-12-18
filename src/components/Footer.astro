@@ -1,3 +1,6 @@
+---
+import Button from "./Button.astro"
+---
 <footer>
   <hr class="line">
   <section>
@@ -30,7 +33,7 @@
         <h5>Kontakt</h5>
         <p>info@elisabethnails.dk</p>
         <li class="nav-item">
-          <a href="/ListView" class="nav-link btn">BESTIL TID</a>
+          <a href="/ListView" class="nav-link btn" ><Button variant="secondary">BESTIL TID</Button></a>
         </li>
       </div>
     </section>
@@ -38,12 +41,6 @@
 
 <style>
       .btn {
-    background-color: #8e0928;
-    color: #fcf8ec;
-    padding: 12px 20px;
-    border-radius: 20px;
-    font-weight: 600;
-    text-align: center;
     display: inline-block;
     
   }
@@ -76,6 +73,12 @@ width: 30px;
     text-align: center;
   }
 
+  .line {
+      margin-top: 0px;
+      margin-bottom: 20px;
+      margin-left: -20px;
+      margin-right: -0px
+    }
 
 
   @media (min-width: 900px) {
@@ -87,11 +90,13 @@ h5, p {
 text-align: left;
 }
 .line {
-  margin-top: 10rem;
+      margin-top: 10rem;
       border: none;
       height: 2px;
       background-color: rgb(220, 218, 211, 0.8);
       display: block;
+      margin-left: -100px;
+      margin-right: -100px
     }
     .logo{
       margin-top: 3rem;

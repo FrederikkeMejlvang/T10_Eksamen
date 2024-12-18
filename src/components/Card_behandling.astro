@@ -6,13 +6,13 @@ import Button from "../components/Button.astro"
 
 <article>
     <h5>{data.navn}</h5>
-    <img src=`../public/img/${data.img}` alt="Billede af negle">
+    <img src=`../img/${data.img}` alt="Billede af negle">
     <div class="mobile_layout">
         <div>
     <p>TID: {data.tid}</p>
     <p>PRIS: DKK {data.pris},-</p>
 </div>
-    <a class="button_wrapper" href={`behandlinger/${data.slug}`}>
+    <a class="button_wrapper" href={`/behandlinger/${data.slug}`}>
     <Button variant="secondary">BESTIL TID</Button>
 </div>
 </a>
