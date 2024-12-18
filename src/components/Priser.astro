@@ -7,20 +7,26 @@
         <h3>FORLÆNGELSE</h3>
         <div class="priser_container">
           <div>
+            <div class="flexbox">
             <p>Forlængelse u. farve</p>
-            <p>Forlængelse m. farve</p>
-            <p>Forlængelse m. design (level 1)</p>
-            <p>Forlængelse m. design (level 2)</p>
-            <p>Forlængelse m. design (level 3)</p>
-            <p>Forlængelse - Freestyle</p>
-          </div>
-          <div>
             <p>DKK 625,-</p>
+          </div>
+            <div class="flexbox">
+            <p>Forlængelse m. farve</p>
             <p>DKK 650,-</p>
+          </div>
+            <div class="flexbox">
+            <p>Forlængelse m. design (level 1)</p>
             <p>DKK 700,-</p>
+          </div>
+            <div class="flexbox">
+            <p>Forlængelse m. design (level 2)</p>
             <p>DKK 750,-</p>
+          </div>
+            <div class="flexbox">
+            <p>Forlængelse m. design (level 3)</p>
             <p>DKK 850,-</p>
-            <p>DKK 725,-</p>
+          </div>
           </div>
         </div>
       </div>
@@ -31,16 +37,32 @@
         <h3>GELPOLISH</h3>
         <div class="priser_container_omvendt">
           <div>
+            <div class="flexbox">
             <p>Gelpolish helfarve inkl. manicure</p>
+            <p>DKK 400,-</p>
+          </div>
+          <div class="flexbox">
             <p>Gelpolish inkl. manicure + design (level 1)</p>
+            <p>DKK 450,-</p>
+          </div>
+            <div class="flexbox">
             <p>Gelpolish inkl. manicure + design (level 2)</p>
+            <p>DKK 475,-</p>
+          </div>
+            <div class="flexbox">
             <p>Gelpolish inkl. manicure + design (level 3)</p>
+            <p>DKK 550,-</p>
+          </div>
+          <div class="flexbox">
+            <p>Gelpolish inkl. manicure + design - freestyle</p>
+            <p>DKK 500,-</p>
+          </div>
           </div>
           <div>
-            <p>DKK 400,-</p>
-            <p>DKK 450,-</p>
-            <p>DKK 475,-</p>
-            <p>DKK 550,-</p>
+            
+            
+          
+            
           </div>
         </div>
       </div>
@@ -53,22 +75,26 @@
         <h3>FORSTÆRKNING</h3>
         <div class="priser_container">
           <div>
+            <div class="flexbox">
             <p>Forstærkning u. farve (nude)</p>
-            <p>Forstærkning m. farve</p>
-            <p>Forstærkning inkl. manicure + design (level 1)</p>
-            <p>Forstærkning inkl. manicure + design (level 2)</p>
-            <p>Forstærkning inkl. manicure + design (level 3)</p>
-            <p>Forstærkning - neglebider (u. design)</p>
-            <p>Forstærkning - Freestyle</p>
-          </div>
-          <div>
             <p>DKK 600,-</p>
+          </div>
+          <div class="flexbox">
+            <p>Forstærkning m. farve</p>
             <p>DKK 625,-</p>
+          </div>
+            <div class="flexbox">
+            <p>Forstærkning inkl. manicure + design (level 1)</p>
             <p>DKK 650,-</p>
+          </div>
+            <div class="flexbox">
+            <p>Forstærkning inkl. manicure + design (level 2)</p>
             <p>DKK 700,-</p>
+          </div>
+            <div class="flexbox">
+            <p>Forstærkning inkl. manicure + design (level 3)</p>
             <p>DKK 750,-</p>
-            <p>DKK 500,-</p>
-            <p>DKK 675,-</p>
+          </div>
           </div>
         </div>
       </div>
@@ -80,20 +106,26 @@
         <h3>OPFYLDNING</h3>
         <div class="priser_container_omvendt">
           <div>
+            <div class="flexbox">
             <p>Opfyldning forlængelse u. farve + m. farve</p>
-            <p>Opfyldning forlængelse m. design (level 1-3)</p>
-            <p>Opfyldning forstærkning (alle på nær Freestyle)</p>
-            <p>Opfyldning forstærkning - Freestyle</p>
-            <p>Aftagning</p>
-            <p>Aftagning - Andens arbejde</p>
+            <p>DKK 600,-</p>
           </div>
-          <div>
-            <p>Sparer DKK 75,-</p>
-            <p>Sparer DKK 100,-</p>
-            <p>Sparer DKK 50,-</p>
-            <p>Sparer DKK 15,-</p>
-            <p>DKK 100 - 170,-</p>
-            <p>DKK 170 - 200,-</p>
+            <div class="flexbox">
+            <p>Opfyldning forlængelse m. design (level 1-3)</p>
+            <p>DKK 625,-</p>
+          </div>
+            <div class="flexbox">
+            <p>Opfyldning forstærkning (alle på nær Freestyle)</p>
+            <p>DKK 650,-</p>
+          </div>
+            <div class="flexbox">
+            <p>Opfyldning forstærkning - Freestyle</p>
+            <p>DKK 700,-</p>
+          </div>
+            <div class="flexbox">
+            <p>Aftagning</p>
+            <p>DKK 750,-</p>
+          </div>
           </div>
         </div>
       </div>
@@ -103,6 +135,14 @@
 </main>
 
 <style>
+
+  .flexbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+    
   .priser_container {
     border-style: solid;
     border-color: #8e0928;
@@ -111,23 +151,27 @@
     padding-right: 2rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    display: grid;
+    /*display: grid;
     grid-template-columns: 3fr 1fr;
     column-gap: 4rem;
+    */
     max-width: 800px;
   }
 
   .priser_container_omvendt {
     border-style: solid;
     border-color: #8e0928;
+    min-height: 300px;
     border-radius: 15px;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    /*
     display: grid;
     grid-template-columns: 3fr 1fr;
     column-gap: 6rem;
+    */
     max-width: 800px;
   }
 
