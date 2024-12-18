@@ -55,6 +55,7 @@ import Button from "../components/Button.astro"
   .line {
     border: none;
     height: 2px;
+    margin-bottom: 100px;
     background-color: var(--rød-100);
   }
 
@@ -116,6 +117,10 @@ import Button from "../components/Button.astro"
     display: none;
   }
   @media (max-width: 900px) {
+
+    .line {
+    margin-bottom: 40px;
+  }
     .nav-menu {
       position: fixed;
       left: -150%;
