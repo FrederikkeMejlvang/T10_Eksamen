@@ -1,11 +1,15 @@
+---
+import Button from "../components/Button.astro"
+---
+
 <section>
-  <article class="follow_knap">
+  <article>
     <div class="knapogoverskrift">
-      <h2>Galleri</h2>
+      <h2>GALLERI</h2>
       <a
-        href="https://www.instagram.com/elisabethnails?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        href="https://www.instagram.com/elisabethnails?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="btn"
       >
-        <button>Følg os her </button>
+        <Button variant="primary">FØLG MED</Button></a>
       </a>
     </div>
   </article>
@@ -39,6 +43,15 @@
 </section>
 
 <style>
+
+  body{
+    margin: 0px;
+  }
+
+  section {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
   .karrusel-container {
     position: relative;
     max-width: 100%;
@@ -48,7 +61,6 @@
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 2rem;
-    padding-top: 1rem;
   }
 
   .karrusel-slide {
@@ -70,45 +82,30 @@
 
   section {
     background-color: #8e0928;
-    margin-top: 1rem;
-    margin-bottom: 3rem;
   }
 
   h2 {
     color: #fcf8ec;
   }
 
-  button {
-    background-color: #fcf8ec;
-    color: #8e0928;
-    border-radius: 5px;
-    padding-top: 8px;
-    padding: 8px 20px;
-    font-family: h5;
-    margin-bottom: 1rem;
-    border: none;
-  }
 
   .knapogoverskrift {
-    display: grid;
-    justify-content: center;
-  }
-
-  a {
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+    margin-left: 20px
   }
 
   @media (min-width: 900px) {
     section {
-      background-color: #8e0928;
-      margin-top: 1rem;
-      margin-bottom: 2rem;
+      margin-top: 100px;
+      margin-bottom: 100px;
     }
 
     h2 {
       color: #fcf8ec;
-      padding-top: 4rem;
-      padding-left: 2rem;
       margin: 0;
     }
 
@@ -137,33 +134,10 @@
       padding: 1rem;
     }
 
-    .follow_knap {
-      display: flex;
-    }
-
-    .follow_knap button {
-      justify-content: right;
-    }
-
     .knapogoverskrift {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      position: relative;
-      width: 100%;
-    }
-
-    button {
-      position: absolute;
-      top: 0;
-      right: 0;
-      margin: 4rem;
-      box-shadow: none;
-      padding: 1.5rem;
-      font-size: 20px;
-      font-weight: 700;
-      padding-left: 3rem;
-      padding-right: 3rem;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-top: 50px;
     }
   }
 </style>
