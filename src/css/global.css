@@ -77,7 +77,6 @@ h2.mobil {
 
 h3,
 h4,
-p,
 h3.mobil,
 p.knap,
 a {
@@ -86,6 +85,7 @@ a {
   font-style: normal;
 }
 
+p,
 p.mobil,
 p.tiny {
   font-family: "Poppins", sans-serif;
