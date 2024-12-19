@@ -1,14 +1,57 @@
-<main>
-  <article>
-    <img src="" alt="" />
-  </article>
+--- 
+import Button from "./Button.astro"
+---
+
   <article>
     <div class="overskrift">
-      <h2>Velkommen til</h2>
-      <h1>Elisabeth Nails</h1>
+      <h2>VELKOMMEN TIL</h2>
+      <h1>ELISABETH NAILS</h1>
     </div>
-    <div class="bestiltid">
-      <img src="" alt="" />
+    <div>
+      <a  href="#book_id">
+        <Button variant="primary">BESTIL TID</Button> 
     </div>
   </article>
-</main>
+
+<style>
+  article{
+    background-image: url("/img/hero.webp") ;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    margin-left: -100px;
+    margin-right: -100px;
+    margin-top: -100px;
+    margin-bottom: 100px;
+  }
+
+  h1, h2, a{
+    margin-left: 100px;
+  }
+
+  h1, h2{
+    color: var(--hvid-100);
+  }
+
+  .overskrift{
+    margin-top: 200px;
+  }
+
+  @media (max-width: 900px) {
+    article{
+      margin-bottom: 40px;
+      margin-left: -20px;
+      margin-right: -20px;
+      margin-top: -40px;
+      height: 400px;
+    }
+    h1, h2, a{
+    margin-left: 20px;
+  }
+  .overskrift{
+    margin-top: 100px;
+  }
+  }
+</style>
